@@ -1,10 +1,12 @@
 # cli.py
 import click
+from blastmap import __version__
 from pathlib import Path
 from .core import build_graph, render_graph
 
 
 @click.group()
+@click.version_option(version=__version__, prog_name="blastmap")
 def main():
     """Blastmap — instantly visualize any Python codebase's dependency graph."""
     pass
